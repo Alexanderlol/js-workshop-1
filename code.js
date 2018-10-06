@@ -7,8 +7,8 @@
 // let friend2 = 'Mark';
 // let friend3 = 'David';
 
-let friends = ['John', 'Mark', 'David'];
-let testGrades = [99, 87, 65, 92];
+// let friends = ['John', 'Mark', 'David'];
+// let testGrades = [99, 87, 65, 92];
 
 // console.log(testGrades);
 // console.log(testGrades[0]);
@@ -34,19 +34,45 @@ let testGrades = [99, 87, 65, 92];
 //   Array Functions
 //---------------------
 
-testGrades.push(400);
-console.log(testGrades);
-testGrades.pop();
-console.log(testGrades);
-testGrades.reverse();
-console.log(testGrades);
-testGrades.shift();
-console.log(testGrades);
-testGrades.unshift(200);
-console.log(testGrades);
-testGrades.splice(1,1);
-console.log(testGrades);
-testGrades.sort();
-console.log(testGrades);
-friends.sort();
-console.log(friends);
+// testGrades.push(400);
+// console.log(testGrades);
+// testGrades.pop();
+// console.log(testGrades);
+// testGrades.reverse();
+// console.log(testGrades);
+// testGrades.shift();
+// console.log(testGrades);
+// testGrades.unshift(200);
+// console.log(testGrades);
+// testGrades.splice(1,1);
+// console.log(testGrades);
+// testGrades.sort();
+// console.log(testGrades);
+// friends.sort();
+// console.log(friends);
+
+//---------------------
+//      Functions
+//---------------------
+
+// function sayHello(){
+//     console.log("Hello");
+// }
+
+// let sayHello = function (){
+//     console.log("Hello");
+// }
+
+function sayHello(name){
+    console.log("Hello " + name);
+}
+
+sayHello('alex');
+
+// let addNumbers = function(num1, num2){
+//     console.log(num1 + num2);
+// }
+let addNumbers = (num1, num2) => {
+    console.log(num1 + num2);
+}
+addNumbers(3, 5);
