@@ -181,3 +181,102 @@ counterIncrementer();
 //---------------------
 // High Order Functions
 //---------------------
+
+function getAddFunction(){
+	return (num1, num2) => num1 + num2;
+}
+
+let addFunction = getAddFunction();
+
+console.log(addFunction(5,6));
+
+//---------------------
+// Advanced Arrays
+//---------------------
+
+let letters = ['c', 'a', 't'];
+let numbers = [2, 60, 500];
+
+console.log(letters.toString());
+console.log(letters.join(''));
+console.log(letters.concat(numbers));
+console.log(letters.includes('a'));
+console.log(letters.indexOf('c'));
+console.log(letters.slice(1));
+console.log(letters.slice(0,2));
+
+let filtered = letters.filter( (letter) => {return letter == 'a'});
+console.log(filtered);
+
+let mapped = letters.map( (letter) => {return letter + '|'});
+console.log(mapped);
+
+function reducerFunction(accumulator, currentValue) {
+	return accumulator + currentValue;
+}
+
+let reducedArray = numbers.reduce(reducerFunction);
+
+console.log(reducedArray);
+
+
+//---------------------
+//      Objects
+//---------------------
+
+let personArray = ['Mike', 24, 'Programmer', true];
+
+let person = {
+	name: 'Mike',
+	age: 24,
+	occupation: 'Programmer',
+	registeredVoter: true,
+}
+console.log( person );
+console.log( person.name );
+console.log( person['name']);
+person.age = 900;
+console.log( person.age );
+
+//---------------------
+//       Classes
+//---------------------
+
+class Book {
+	constructor(title, author){
+		this.title = title;
+		this.author = author;
+	}
+
+	readBook(){
+		console.log("Reading " + this.title);
+	}
+
+}
+
+let hp = new Book("Harry Potter", "JK Rowling");
+
+console.log(hp);
+hp.readBook();
+
+//---------------------
+//       REGEX
+//---------------------
+
+console.log(
+	"Hello".search(/lo/)
+);
+
+//---------------------
+//       Errors
+//---------------------
+
+try {
+	console.log(z);
+	throw SyntaxError("custom error");
+} catch(error) {
+	console.log(error);
+	console.log(error.name);
+} finally {
+	console.log("always executed");
+}
